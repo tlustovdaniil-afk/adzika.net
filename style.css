@@ -1,0 +1,301 @@
+
+
+body {
+    margin: 0;
+    font-family: 'Nunito', Arial, sans-serif;
+    background-color: #92E691;   /* кремовий, як папір */
+    color: #4a3a28;              /* теплий коричневий замість чорного */
+    line-height: 1.7;
+}
+
+/* Заголовки — іншим, "книжковим" шрифтом */
+h1, h2, h3 {
+    font-family: 'Lora', Georgia, serif;
+    margin-top: 0;
+    color: #3d4a26;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #92E691;
+}
+
+/* Маленький підзаголовок над великим заголовком */
+.small-title {
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* =========================================
+   ШАПКА
+   ========================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: lightgreen;
+}
+
+.logo {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #3d4a26;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 20px;
+    border-radius: 30px;
+    color: #4a3a28;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+/* Пункт меню стає "медовою" плашкою */
+.menu a:hover {
+    background-color: green;
+    color: white;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+    /* Тепле "медове" затемнення поверх фото гір */
+    background: linear-gradient(rgba(61, 74, 38, 0.45), rgba(120, 72, 20, 0.55)),
+                url('https://images.unian.net/photos/2026_02/1771446040-2061.jpg?r=273342') no-repeat center/cover;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    /* Округлі кути — у природі немає гострих кутів */
+    margin: 0 20px;
+    border-radius: 40px;
+}
+
+.hero-content {
+    max-width: 620px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #fdf3df;
+    font-size: 19px;
+    margin-bottom: 36px;
+}
+
+/* =========================================
+   КНОПКИ
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color:#93E88B ;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    box-shadow: 0 6px 0 #50C944;     /* "товщина" кнопки, як у пластиліну */
+    transition: all 0.2s;
+}
+
+/* При наведенні кнопка ніби натискається */
+.btn:hover {
+    background-color: #B4F5B0;
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #71D169;
+}
+
+.btn-light {
+    background-color: #faf6ee;
+    color: #3d4a26;
+    box-shadow: 0 6px 0 #c9b88f;
+}
+
+.btn-light:hover {
+    background-color: #ffffff;
+    box-shadow: 0 2px 0 #c9b88f;
+}
+
+/* =========================================
+   НАША ІСТОРІЯ
+   ========================================= */
+.about-inner {
+    display: flex;
+    flex-wrap: wrap;          /* на вузькому екрані фото стане під текст */
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+/* Картинка у формі "краплі" — нерівні радіуси кутів */
+.about-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10% 23% 70% 90% / 45% 40% 70% 10%;
+    box-shadow: 0 20px 40px rgba(74, 58, 40, 0.2);
+    transition: all 1s;
+}
+
+.about-img:hover {
+    border-radius: 76% 8% 54% 14% / 34% 13% 49% 24%; /* форма "переливається" */
+}
+
+.about-text {
+    flex: 1;
+    color:black;
+}
+
+.about-text h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    color:black;
+}
+
+/* =========================================
+   КАРТКИ
+   ========================================= */
+.cards {
+    background-color: #eef0e2;   /* світло-зелений, як молоде листя */
+    border-radius: 60px 60px 0 0;
+}
+
+.cards .container {
+    padding-top: 80px;
+    padding-bottom: 90px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 48px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    background-color: #92E691;
+}
+
+.card {
+    width: 250px;   /* padding додається до ширини, тому беремо трохи менше */
+    background-color: #faf6ee;
+    padding: 20px 20px 28px;
+    border-radius: 32px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(61, 74, 38, 0.1);
+    transition: all 0.3s;
+    background-color:#5FD455;
+}
+
+.card:hover {
+    transform: translateY(-6px) rotate(-2deg);   /* легенький нахил, як у листочка */
+    box-shadow: 0 20px 35px rgba(61, 74, 38, 0.18);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.card p {
+    margin: 0 0 12px;
+}
+
+.card .price {
+    display: inline-block;
+    padding: 6px 18px;
+    background-color: #f3e2bd;
+    border-radius: 20px;
+    font-weight: 700;
+    color: #8a5a12;
+    margin: 0;
+}
+
+/* =========================================
+   У ГОСТІ
+   ========================================= */
+.visit {
+    background: linear-gradient(135deg, #5a6b3c, #3d4a26);
+}
+
+.visit-inner {
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.visit h2 {
+    color:black:
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.visit p {
+    color:black;
+    max-width: 560px;
+    margin: 0 auto 36px;
+    font-size: 18px;
+}
+
+/* =========================================
+   ПІДВАЛ
+   ========================================= */
+.footer {
+    background-color: #2f3a1d;
+    color: #b9c29a;
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 14px;
+}
+
+.price{
+    background-color:#9E0D00 ;
+}
